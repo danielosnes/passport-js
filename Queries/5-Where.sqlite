@@ -1,0 +1,70 @@
+/*
+We can restrict our query results using the [WHERE] clause in order to obtain only the information we want.
+
+Following this format, the statement below filters the result set to only include top rated movies (IMDb ratings greater than 8):
+
+SELECT * FROM movies WHERE imdb_rating > 8;
+
+How does it work?
+
+The [WHERE] clause filters the result set to only include rows where the condition is true.
+[imdb_rating > 8] is the condition.
+Here only rows with a value greater than 8 in the [imdb_rating] column will be returned.
+
+The [>] is an operator.
+Operaters create a condition that can be evaluated as either true or false.
+
+Comparison operators used with the WHERE clause are:
+
+[=] equal to
+[!=] not equal to
+[>] greater than
+[<] less than
+[>=] greater than or equal to
+[<=] less than or equal to
+There are also some special operators that we will learn more about in the upcoming exercises.
+
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+Instructions
+Checkpoint 1 Passed
+1.
+Suppose we want to take a peek at all the not-so-well-received movies in the database.
+
+In the code editor, type:
+
+SELECT * 
+FROM movies 
+WHERE imdb_rating < 5;
+
+Copy to Clipboard
+
+Ouch!
+
+We are trying to retrieve all the movies with ratings lower than 5.
+
+Common errors:
+
+Missing underscore in the imdb_rating column name.
+Missing ; at the end.
+Checkpoint 2 Passed
+2.
+Now retrieve all the recent movies, specifically those that were released after 2014.
+
+Select all the columns using *.
+
+The condition here would be year > 2014
+
+If you add the condition after the WHERE clause, it would look like:
+
+SELECT *
+FROM movies
+WHERE year > 2014;
+
+Copy to Clipboard
+*/
+/****************************************************************************************************************************************************************/
+
+
