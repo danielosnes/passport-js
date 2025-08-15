@@ -1,0 +1,63 @@
+/*
+We've been working with a fairly small table (fewer than 250 rows), but most SQL tables contain hundreds of thousands of records.
+In those situation, it becomes important to cap the number of rows in the result.
+
+For instance, image that we just want to see a few examples of records.
+
+SELECT * FROM movies LIMIT 10;
+
+[LIMIT] is a clause that lets you specify the maximum number of rows the resulte set will have.
+This saves space on our screen and makes our queries run faster.
+
+Here, we specify that the result set can't have more than 10 rows.
+
+[LIMIT] always goes at the very end of the query.
+
+Also it is not support in all SQL databases.
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+Instructions
+Checkpoint 1 Passed
+1.
+Combining your knowledge of LIMIT and ORDER BY, write a query that returns the top 3 highest rated movies.
+
+Select all the columns.
+
+First, what column(s) and table are we interested in?
+
+SELECT *
+FROM movies;
+
+Copy to Clipboard
+
+Next, sort them by rating (descending so we start from the highest).
+
+SELECT *
+FROM movies
+ORDER BY imdb_rating DESC;
+
+Copy to Clipboard
+
+Lastly, add a LIMIT cap.
+
+SELECT *
+FROM movies
+ORDER BY imdb_rating DESC
+LIMIT 3;
+
+Copy to Clipboard
+
+If you run this query, the result will be ‘The Dark Knight’ at an impressive 9.0, ‘Inception’ and ‘Star Wars: Episode V - The Empire Strikes Back’ tying for second with a rating of 8.8.
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+SELECT * FROM movies ORDER BY imdb_rating DESC LIMIT 3;
+
+4	The Dark Knight	action	2008	9.0
+30	Inception	action	2010	8.8
+32	Star Wars: Episode V - The Empire Strikes Back	action	1980	8.8
+*/
+/****************************************************************************************************************************************************************/
