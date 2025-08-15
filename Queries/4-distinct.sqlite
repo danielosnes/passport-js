@@ -1,0 +1,156 @@
+/*
+
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+When we are examining data in a table,
+it can be helpful to know what /distinct/ values exist in a particular column.
+
+[DISTINCT] is used to return unique values in the output.
+It filters out all duplicate values in the specified column(s).
+
+For instance,
+
+SELECT tools FROM inventory;
+
+might produce:
+
+tools
+Hammer
+Nails
+Nails
+Nails
+
+By adding [DISTINCT] before the column name like:
+
+SELECT DISTINCT tools FROM inventory;
+
+The result would now be:
+
+tools
+Hammer
+Nails
+
+
+Filtering the results of a query is an important skill in SQL.
+It is easier to see the different possible [genre]s in the [movie] table after the data has been filtered than to scan every row in the table.
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+Instructions
+Checkpoint 1 Passed
+1.
+Let’s try it out. In the code editor, type:
+
+SELECT DISTINCT genre 
+FROM movies;
+
+Copy to Clipboard
+
+What are the unique genres?
+
+The different genres are:
+
+action
+comedy
+horror
+romance
+drama
+∅
+The empty set symbol ∅ is just an empty value. DISTINCT recognize empty values, too.
+
+Checkpoint 2 Passed
+2.
+Now, change the code so we return the unique values of the year column instead.
+
+Suppose we only want to query the distinct results from a column. We will use the syntax:
+
+SELECT DISTINCT column
+FROM table_name;
+
+Copy to Clipboard
+
+Following this format, the code below returns the unique values of the year column:
+
+SELECT DISTINCT year 
+FROM movies;
+
+Copy to Clipboard
+
+In the result, there should only be one column with all the distinct years.
+
+Note: You might’ve noticed how there appears to be an empty set symbol ∅ near the bottom of the results (right below 1987 and above 2017). It is not a bug! DISTINCT recognize empty values, too.
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+Query Results
+genre
+action
+comedy
+horror
+romance
+drama
+Database Schema
+movies
+name	type
+id	INTEGER
+name	TEXT
+genre	TEXT
+year	INTEGER
+imdb_rating	REAL
+Rows: 230
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+Query Results
+year
+2009
+2015
+2012
+2008
+1999
+1977
+2006
+2013
+2002
+2005
+2004
+2011
+2014
+2007
+2010
+1983
+1996
+2003
+1980
+1989
+1984
+1997
+2001
+1990
+2000
+1993
+1992
+1985
+1994
+1978
+1979
+1986
+1998
+1991
+1939
+1937
+1982
+1965
+1995
+1975
+1988
+1987
+2017
+2016
+*/
+/****************************************************************************************************************************************************************/
