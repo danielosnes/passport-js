@@ -1,0 +1,77 @@
+/*
+
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+The [DELETE FROM] statement deletes one or more reows from a table.
+You can use the statement when you want to delete existing records.
+The statement below deletes all records in the [celebs] table with no [twitter_handle].
+
+DELETE FROM celebs
+WHERE twitter_handle is NULL;
+
+1: [DELETE FROM] 
+    is a clause that lets you delete rows from a table
+2: [celebs]
+    is the name of the table we want to delete from
+3: [WHERE]
+    is a clause that lets you select which rows you want to delete.
+    Here we want to delete all of the rows where twitter_handle [IS NULL]
+4: [IS NULL]
+    is a condition in SQL that returns true when the value is [NULL] and false otherwise.
+
+
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+Instructions
+Checkpoint 1 Passed
+1.
+Delete all of the rows that have a NULL value in the twitter handle column. In the code editor, type the following:
+
+DELETE FROM celebs 
+WHERE twitter_handle IS NULL;
+
+SELECT * FROM celebs; 
+
+Copy to Clipboard
+
+How many rows exist in the celebs table now?
+
+Did you type:
+
+SELECT * FROM celebs;
+
+Copy to Clipboard
+
+after your deletion statement?
+
+There should only be 1 row left.
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+DELETE FROM celebs
+WHERE twitter_handle IS NULL;
+
+SELECT * FROM celebs;
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+Query Results
+id	name	age	twitter_handle
+4	Taylor Swift	33	@taylorswift13
+Database Schema
+celebs
+name	type
+id	INTEGER
+name	TEXT
+age	INTEGER
+twitter_handle	TEXT
+Rows: 1
+
+*/
+/****************************************************************************************************************************************************************/
