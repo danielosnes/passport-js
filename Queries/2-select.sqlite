@@ -1,0 +1,308 @@
+/*
+
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+Previously, we learned that [SELECT] is used every time you want to query data from a database and [*] means ALL columns.
+
+Suppose we are only interested in two of the columns.
+We can select individual columns by their names (separated by commas):
+
+SELECT column1, column2
+FROM table_name
+
+To make it easier to read, we moved [FROM] to another line.
+
+Line breaks don't mean anything specific in SQL.
+We could write this entire query in one line, and it would run just fine.
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+Instructions
+Checkpoint 1 Passed
+1.
+Let’s only select the name and genre columns of the table.
+
+In the code editor, type the following:
+
+SELECT name, genre 
+FROM movies;
+
+Copy to Clipboard
+
+Checkpoint 2 Passed
+2.
+Now we want to include a third column.
+
+Edit your query so that it returns the name, genre, and year columns of the table.
+
+The syntax for selecting three individual columns:
+
+SELECT column1, column2, column3
+FROM table_name;
+
+Copy to Clipboard
+
+Following this format, the query below selects name, genre, and year columns (in that order) from the movies table:
+
+SELECT name, genre, year
+FROM movies;
+
+Copy to Clipboard
+
+We have to separate the column names with a comma.
+SQL commands end with a ;.
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+SELECT name, genre, year FROM movies;
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+Query Results
+name	genre	year
+Avatar	action	2009
+Jurassic World	action	2015
+The Avengers	action	2012
+The Dark Knight	action	2008
+Star Wars: Episode I - The Phantom Menace	action	1999
+Star Wars	action	1977
+Avengers: Age of Ultron	action	2015
+The Dark Knight Rises	action	2012
+Pirates of the Caribbean: Dead Mans Chest	action	2006
+Iron Man 3	action	2013
+Spider-Man	action	2002
+Transformers: Revenge of the Fallen	action	2009
+Star Wars: Episode III - Revenge of the Sith	action	2005
+Spider-Man 2	action	2004
+Transformers: Dark of the Moon	action	2011
+American Sniper	action	2014
+Furious Seven	action	2015
+Spider-Man 3	action	2007
+Guardians of the Galaxy	action	2014
+Transformers	action	2007
+Iron Man	action	2008
+Indiana Jones and the Kingdom of the Crystal Skull	action	2008
+Iron Man 2	action	2010
+Star Wars: Episode II - Attack of the Clones	action	2002
+Pirates of the Caribbean: At Worlds End	action	2007
+Star Wars: Episode VI - Return of the Jedi	action	1983
+Independence Day	action	1996
+Pirates of the Caribbean: The Curse of the Black Pearl	action	2003
+Skyfall	action	2012
+Inception	action	2010
+Man of Steel	action	2013
+Star Wars: Episode V - The Empire Strikes Back	action	1980
+The Matrix Reloaded	action	2003
+The Amazing Spider-Man	action	2012
+The Incredibles	action	2004
+Captain America: The Winter Soldier	action	2014
+The Lego Movie	action	2014
+Star Trek	action	2009
+Batman	action	1989
+Night at the Museum	action	2006
+Transformers: Age of Extinction	action	2014
+Twister	action	1996
+Maleficent	action	2014
+Pirates of the Caribbean: On Stranger Tides	action	2011
+Fast & Furious 6	action	2013
+Beverly Hills Cop	action	1984
+X-Men: The Last Stand	action	2006
+X-Men: Days of Future Past	action	2014
+The Lost World: Jurassic Park	action	1997
+Star Trek Into Darkness	action	2013
+Shrek 2	comedy	2004
+Toy Story 3	comedy	2010
+Frozen	comedy	2013
+Finding Nemo	comedy	2003
+Despicable Me 2	comedy	2013
+Inside Out	comedy	2015
+Shrek the Third	comedy	2007
+Minions	comedy	2015
+Up	comedy	2009
+Monsters, Inc.	comedy	2001
+Home Alone	comedy	1990
+Meet the Fockers	comedy	2004
+The Hangover	comedy	2009
+Monsters University	comedy	2013
+Shrek	comedy	2001
+How the Grinch Stole Christmas	comedy	2000
+The Hangover Part II	comedy	2011
+Despicable Me	comedy	2010
+Men in Black	comedy	1997
+Toy Story 2	comedy	1999
+Cars	comedy	2006
+Bruce Almighty	comedy	2003
+My Big Fat Greek Wedding	comedy	2002
+Shrek Forever After	comedy	2010
+Brave	comedy	2012
+Ghostbusters	comedy	1984
+Rush Hour 2	comedy	2001
+Big Hero 6	comedy	2014
+Alvin and the Chipmunks: The Squeakquel	comedy	2009
+Mrs. Doubtfire	comedy	1993
+Ted	comedy	2012
+Aladdin	comedy	1992
+Alvin and the Chipmunks	comedy	2007
+Madagascar 3: Europes Most Wanted	comedy	2012
+Kung Fu Panda	comedy	2008
+The Lorax	comedy	2012
+Austin Powers in Goldmember	comedy	2002
+Back to the Future	comedy	1985
+Wedding Crashers	comedy	2005
+Charlie and the Chocolate Factory	comedy	2005
+Ratatouille	comedy	2007
+Austin Powers: The Spy Who Shagged Me	comedy	1999
+Tangled	comedy	2010
+Monsters vs. Aliens	comedy	2009
+Happy Feet	comedy	2006
+Ice Age: Dawn of the Dinosaurs	comedy	2009
+Ice Age: The Meltdown	comedy	2006
+World War Z	horror	2013
+What Lies Beneath	horror	2000
+Gremlins	horror	1984
+The Blair Witch Project	horror	1999
+The Conjuring	horror	2013
+The Ring	horror	2002
+The Grudge	horror	2004
+Paranormal Activity	horror	2007
+Interview with the Vampire: The Vampire Chronicles	horror	1994
+Paranormal Activity 3	horror	2011
+Scream	horror	1996
+Jaws 2	horror	1978
+Scream 2	horror	1997
+Sleepy Hollow	horror	1999
+The Others	horror	2001
+The Haunting	horror	1999
+Scream 3	horror	2000
+Saw II	horror	2005
+The Amityville Horror	horror	1979
+Aliens	horror	1986
+Paranormal Activity 2	horror	2010
+Annabelle	horror	2014
+Scooby-Doo 2: Monsters Unleashed	horror	2004
+Insidious: Chapter 2	horror	2013
+Dracula	horror	1992
+Freddy vs. Jason	horror	2003
+Blade II	horror	2002
+Saw III	horror	2006
+The Texas Chainsaw Massacre	horror	2003
+Cloverfield	horror	2008
+Dark Shadows	horror	2012
+The Ring Two	horror	2005
+Zombieland	horror	2009
+Constantine	horror	2005
+The Exorcism of Emily Rose	horror	2005
+I Know What You Did Last Summer	horror	1997
+1408	horror	2007
+Mama	horror	2013
+The Purge: Anarchy	horror	2014
+Scary Movie 2	horror	2001
+Blade	horror	1998
+End of Days	horror	1999
+The Forgotten	horror	2004
+The Final Destination	horror	2009
+Warm Bodies	horror	2013
+Anaconda	horror	1997
+Wolf	horror	1994
+Friday the 13th	horror	2009
+The Purge	horror	2013
+Titanic	romance	1997
+Forrest Gump	romance	1994
+The Twilight Saga: Eclipse	romance	2010
+The Twilight Saga: New Moon	romance	2009
+The Twilight Saga: Breaking Dawn - Part 2	romance	2012
+The Twilight Saga: Breaking Dawn - Part 1	romance	2011
+Beauty and the Beast	romance	1991
+King Kong	romance	2005
+Ghost	romance	1990
+Cinderella	romance	2015
+Gone with the Wind	romance	1939
+Pearl Harbor	romance	2001
+Twilight	romance	2008
+Mr. & Mrs. Smith	romance	2005
+Snow White and the Seven Dwarfs	romance	1937
+What Women Want	romance	2000
+Top Gun	romance	1986
+Pretty Woman	romance	1990
+Hitch	romance	2005
+Tootsie	romance	1982
+Theres Something About Mary	romance	1998
+Elf	romance	2003
+Tarzan	romance	1999
+Bridesmaids	romance	2011
+Fifty Shades of Grey	romance	2015
+Robin Hood: Prince of Thieves	romance	1991
+The Proposal	romance	2009
+The Sound of Music	romance	1965
+Jerry Maguire	romance	1996
+Sex and the City	romance	2008
+Runaway Bride	romance	1999
+Les Misérables	romance	2012
+Knocked Up	romance	2007
+Little Fockers	romance	2010
+As Good as It Gets	romance	1997
+American Pie 2	romance	2001
+The Great Gatsby	romance	2013
+Mamma Mia!	romance	2008
+Juno	romance	2007
+Marley & Me	romance	2008
+Pocahontas	romance	1995
+Slumdog Millionaire	romance	2008
+Look Whos Talking	romance	1989
+Click	romance	2006
+The Lion King	drama	1994
+Harry Potter and the Deathly Hallows: Part 2	drama	2011
+The Sixth Sense	drama	1999
+Jaws	drama	1975
+I Am Legend	drama	2007
+The Blind Side	drama	2009
+Cast Away	drama	2000
+Signs	drama	2002
+Saving Private Ryan	drama	1998
+Dawn of the Planet of the Apes	drama	2014
+Interstellar	drama	2014
+Gladiator	drama	2000
+Dances with Wolves	drama	1990
+The Perfect Storm	drama	2000
+Lincoln	drama	2012
+Rise of the Planet of the Apes	drama	2011
+The Karate Kid	drama	2010
+Rain Man	drama	1988
+Air Force One	drama	1997
+True Grit	drama	2010
+A Beautiful Mind	drama	2001
+The Help	drama	2011
+3 Men and a Baby	drama	1987
+Gone Girl	drama	2014
+Kung Fu Panda 2	drama	2011
+Hannibal	drama	2001
+Catch Me If You Can	drama	2002
+Big Daddy	drama	1999
+Se7en	drama	1995
+Seven	drama	1979
+The Good, the Bad and the Ugly		
+Dawn of the Dead	horror	1978
+Shawn of the Dead	comedy	2004
+Star Wars: The Force Awakens	action	2015
+Star Wars: The Last Jedi	action	2017
+The Shining	horror	1985
+The Devil and Daniel Johnston		2005
+Ali Wong: Baby Cobra		2016
+The Big Sick	romance	2017
+Deadpool	action	2016
+Database Schema
+movies
+name	type
+id	INTEGER
+name	TEXT
+genre	TEXT
+year	INTEGER
+imdb_rating	REAL
+Rows: 230
+*/
+/****************************************************************************************************************************************************************/
