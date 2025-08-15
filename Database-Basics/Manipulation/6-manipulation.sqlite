@@ -1,7 +1,4 @@
-/*
 
-*/
-/****************************************************************************************************************************************************************/
 
 /*
 [SELECT] statements are used to fetch data from a database.
@@ -19,26 +16,85 @@ You can also query data from all columns in a table with [SELECT]
 
 SELECT * FROM celebs;
 
-[*] is a special wildcard character that we have been 
+[*] is a special wildcard character that we have been using.
+It allows you to select ever column in a table without having to name each one individually.
+Here, the resolut set contains every column in the [celebs] table.
+
+[SELECT] statements always return a new table called teh /result set/.
 */
 /****************************************************************************************************************************************************************/
 
 /*
-
+//before:
+//test.sqlite:
+(empty)
+//output:
+Query Results
+Run a query to see results.
 */
 /****************************************************************************************************************************************************************/
 
 /*
+Instructions
+Checkpoint 1 Passed
+1.
+Let’s take a closer look at SELECT and retrieve all the names in the celebs table. In the code editor, type:
 
+SELECT name FROM celebs; 
+
+Copy to Clipboard
+
+Don’t forget to include the FROM clause and the name of the table which we are selecting the data from!
+
+The result should only have a single column (name).
+
+Checkpoint 2 Passed
+2.
+Delete your previous SELECT statement from the code editor.
+
+To SELECT all the data in the celebs table, enter the following statement in the code editor using the * wildcard character:
+
+SELECT * FROM celebs;
+
+Copy to Clipboard
+
+Did you delete the first SELECT statement from the code editor?
 */
 /****************************************************************************************************************************************************************/
 
 /*
+//test.sqlite:
+SELECT name FROM celebs;
+//output:
+Query Results
+name
+Justin Bieber
+Beyonce Knowles
+Jeremy Lin
+Taylor Swift
+Database Schema
+celebs
+name	type
+id	INTEGER
+name	TEXT
+age	INTEGER
+Rows: 4
 
-*/
-/****************************************************************************************************************************************************************/
-
-/*
-
+//test.sqlite:
+SELECT * FROM celebs;
+//output:
+Query Results
+id	name	age
+1	Justin Bieber	29
+2	Beyonce Knowles	42
+3	Jeremy Lin	35
+4	Taylor Swift	33
+Database Schema
+celebs
+name	type
+id	INTEGER
+name	TEXT
+age	INTEGER
+Rows: 4
 */
 /****************************************************************************************************************************************************************/
