@@ -1,0 +1,324 @@
+/*
+A [CASE] statement allows us to create different outputs (usually in the [SELECT] statement).
+Ot os SQL's way of handling if-then logic.
+
+Suppose we want to condense the ratings the [movies] to three levels
+
+    - If the rating is above 8 then it is Fantastic
+    - If the rating is above 6 then it is Poorly received
+    - else, Avoid at All Costs
+
+SELECT name, CASE WHEN imdb_rating > 8 THEN 'Fantastic' WHEN imdb_rating > 6 THEN 'Poorly received' ELSE 'Avoid at All Costs' END FROM movies;
+
+Each [WHEN] tests a condition and the following [THEN] gives us the string if the condition is true.
+
+The [ELSE] gives us the string if ALL the above conditions are false.
+
+The [CASE] statement must end with [END].
+
+In the result, you have to scroll right betcause the column name is very long.
+To shorten it, we can rename the column to 'Review' using [AS]:
+
+SELECT name, 
+    CASE   
+        WHEN imdb_rating > 8 THEN 'Fantastic'
+        WHEN imdb_rating > 6 THEN 'Poorly received'
+        else 'Avoid at All Costs'
+    END AS 'Review'
+FROM movies;
+        
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+Instructions
+Checkpoint 1 Passed
+1.
+Let’s try one on your own.
+
+Select the name column and use a CASE statement to create the second column that is:
+
+‘Chill’ if genre = 'romance'
+‘Chill’ if genre = 'comedy'
+‘Intense’ in all other cases
+Optional: Rename the whole CASE statement to ‘Mood’ using AS.
+
+Give it your best shot! Check hint for the answer.
+
+This is the final boss!
+
+Your query should look like:
+
+SELECT name,
+ CASE
+  WHEN genre = 'romance' THEN 'Chill'
+  WHEN genre = 'comedy'  THEN 'Chill'
+  ELSE 'Intense'
+ END AS 'Mood'
+FROM movies;
+
+Copy to Clipboard
+
+If the genre is romance, then it is Chill.
+If the genre is comedy, then it is Chill.
+Else, it is Intense.
+Don’t forget the comma after name.
+
+Here is another query that will give us the same result:
+
+SELECT name,
+ CASE
+  WHEN genre = 'romance' OR genre = 'comedy' 
+   THEN 'Chill'
+  ELSE 'Intense'
+ END AS 'Mood'
+FROM movies;
+
+Copy to Clipboard
+
+If the genre is romance or comedy, then it is Chill.
+Else, it is Intense.
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+SELECT name,
+  CASE
+    WHEN genre = 'romance' THEN 'Chill'
+    WHEN genre = 'comedy' THEN 'Chill'
+    else 'Intense'
+  END AS 'Mood'
+FROM movies;
+
+Avatar	Intense
+Jurassic World	Intense
+The Avengers	Intense
+The Dark Knight	Intense
+Star Wars: Episode I - The Phantom Menace	Intense
+Star Wars	Intense
+Avengers: Age of Ultron	Intense
+The Dark Knight Rises	Intense
+Pirates of the Caribbean: Dead Mans Chest	Intense
+Iron Man 3	Intense
+Spider-Man	Intense
+Transformers: Revenge of the Fallen	Intense
+Star Wars: Episode III - Revenge of the Sith	Intense
+Spider-Man 2	Intense
+Transformers: Dark of the Moon	Intense
+American Sniper	Intense
+Furious Seven	Intense
+Spider-Man 3	Intense
+Guardians of the Galaxy	Intense
+Transformers	Intense
+Iron Man	Intense
+Indiana Jones and the Kingdom of the Crystal Skull	Intense
+Iron Man 2	Intense
+Star Wars: Episode II - Attack of the Clones	Intense
+Pirates of the Caribbean: At Worlds End	Intense
+Star Wars: Episode VI - Return of the Jedi	Intense
+Independence Day	Intense
+Pirates of the Caribbean: The Curse of the Black Pearl	Intense
+Skyfall	Intense
+Inception	Intense
+Man of Steel	Intense
+Star Wars: Episode V - The Empire Strikes Back	Intense
+The Matrix Reloaded	Intense
+The Amazing Spider-Man	Intense
+The Incredibles	Intense
+Captain America: The Winter Soldier	Intense
+The Lego Movie	Intense
+Star Trek	Intense
+Batman	Intense
+Night at the Museum	Intense
+Transformers: Age of Extinction	Intense
+Twister	Intense
+Maleficent	Intense
+Pirates of the Caribbean: On Stranger Tides	Intense
+Fast & Furious 6	Intense
+Beverly Hills Cop	Intense
+X-Men: The Last Stand	Intense
+X-Men: Days of Future Past	Intense
+The Lost World: Jurassic Park	Intense
+Star Trek Into Darkness	Intense
+Shrek 2	Chill
+Toy Story 3	Chill
+Frozen	Chill
+Finding Nemo	Chill
+Despicable Me 2	Chill
+Inside Out	Chill
+Shrek the Third	Chill
+Minions	Chill
+Up	Chill
+Monsters, Inc.	Chill
+Home Alone	Chill
+Meet the Fockers	Chill
+The Hangover	Chill
+Monsters University	Chill
+Shrek	Chill
+How the Grinch Stole Christmas	Chill
+The Hangover Part II	Chill
+Despicable Me	Chill
+Men in Black	Chill
+Toy Story 2	Chill
+Cars	Chill
+Bruce Almighty	Chill
+My Big Fat Greek Wedding	Chill
+Shrek Forever After	Chill
+Brave	Chill
+Ghostbusters	Chill
+Rush Hour 2	Chill
+Big Hero 6	Chill
+Alvin and the Chipmunks: The Squeakquel	Chill
+Mrs. Doubtfire	Chill
+Ted	Chill
+Aladdin	Chill
+Alvin and the Chipmunks	Chill
+Madagascar 3: Europes Most Wanted	Chill
+Kung Fu Panda	Chill
+The Lorax	Chill
+Austin Powers in Goldmember	Chill
+Back to the Future	Chill
+Wedding Crashers	Chill
+Charlie and the Chocolate Factory	Chill
+Ratatouille	Chill
+Austin Powers: The Spy Who Shagged Me	Chill
+Tangled	Chill
+Monsters vs. Aliens	Chill
+Happy Feet	Chill
+Ice Age: Dawn of the Dinosaurs	Chill
+Ice Age: The Meltdown	Chill
+World War Z	Intense
+What Lies Beneath	Intense
+Gremlins	Intense
+The Blair Witch Project	Intense
+The Conjuring	Intense
+The Ring	Intense
+The Grudge	Intense
+Paranormal Activity	Intense
+Interview with the Vampire: The Vampire Chronicles	Intense
+Paranormal Activity 3	Intense
+Scream	Intense
+Jaws 2	Intense
+Scream 2	Intense
+Sleepy Hollow	Intense
+The Others	Intense
+The Haunting	Intense
+Scream 3	Intense
+Saw II	Intense
+The Amityville Horror	Intense
+Aliens	Intense
+Paranormal Activity 2	Intense
+Annabelle	Intense
+Scooby-Doo 2: Monsters Unleashed	Intense
+Insidious: Chapter 2	Intense
+Dracula	Intense
+Freddy vs. Jason	Intense
+Blade II	Intense
+Saw III	Intense
+The Texas Chainsaw Massacre	Intense
+Cloverfield	Intense
+Dark Shadows	Intense
+The Ring Two	Intense
+Zombieland	Intense
+Constantine	Intense
+The Exorcism of Emily Rose	Intense
+I Know What You Did Last Summer	Intense
+1408	Intense
+Mama	Intense
+The Purge: Anarchy	Intense
+Scary Movie 2	Intense
+Blade	Intense
+End of Days	Intense
+The Forgotten	Intense
+The Final Destination	Intense
+Warm Bodies	Intense
+Anaconda	Intense
+Wolf	Intense
+Friday the 13th	Intense
+The Purge	Intense
+Titanic	Chill
+Forrest Gump	Chill
+The Twilight Saga: Eclipse	Chill
+The Twilight Saga: New Moon	Chill
+The Twilight Saga: Breaking Dawn - Part 2	Chill
+The Twilight Saga: Breaking Dawn - Part 1	Chill
+Beauty and the Beast	Chill
+King Kong	Chill
+Ghost	Chill
+Cinderella	Chill
+Gone with the Wind	Chill
+Pearl Harbor	Chill
+Twilight	Chill
+Mr. & Mrs. Smith	Chill
+Snow White and the Seven Dwarfs	Chill
+What Women Want	Chill
+Top Gun	Chill
+Pretty Woman	Chill
+Hitch	Chill
+Tootsie	Chill
+Theres Something About Mary	Chill
+Elf	Chill
+Tarzan	Chill
+Bridesmaids	Chill
+Fifty Shades of Grey	Chill
+Robin Hood: Prince of Thieves	Chill
+The Proposal	Chill
+The Sound of Music	Chill
+Jerry Maguire	Chill
+Sex and the City	Chill
+Runaway Bride	Chill
+Les Misérables	Chill
+Knocked Up	Chill
+Little Fockers	Chill
+As Good as It Gets	Chill
+American Pie 2	Chill
+The Great Gatsby	Chill
+Mamma Mia!	Chill
+Juno	Chill
+Marley & Me	Chill
+Pocahontas	Chill
+Slumdog Millionaire	Chill
+Look Whos Talking	Chill
+Click	Chill
+The Lion King	Intense
+Harry Potter and the Deathly Hallows: Part 2	Intense
+The Sixth Sense	Intense
+Jaws	Intense
+I Am Legend	Intense
+The Blind Side	Intense
+Cast Away	Intense
+Signs	Intense
+Saving Private Ryan	Intense
+Dawn of the Planet of the Apes	Intense
+Interstellar	Intense
+Gladiator	Intense
+Dances with Wolves	Intense
+The Perfect Storm	Intense
+Lincoln	Intense
+Rise of the Planet of the Apes	Intense
+The Karate Kid	Intense
+Rain Man	Intense
+Air Force One	Intense
+True Grit	Intense
+A Beautiful Mind	Intense
+The Help	Intense
+3 Men and a Baby	Intense
+Gone Girl	Intense
+Kung Fu Panda 2	Intense
+Hannibal	Intense
+Catch Me If You Can	Intense
+Big Daddy	Intense
+Se7en	Intense
+Seven	Intense
+The Good, the Bad and the Ugly	Intense
+Dawn of the Dead	Intense
+Shawn of the Dead	Chill
+Star Wars: The Force Awakens	Intense
+Star Wars: The Last Jedi	Intense
+The Shining	Intense
+The Devil and Daniel Johnston	Intense
+Ali Wong: Baby Cobra	Intense
+The Big Sick	Chill
+Deadpool	Intense
+*/
+/****************************************************************************************************************************************************************/
