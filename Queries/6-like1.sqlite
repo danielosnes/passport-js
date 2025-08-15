@@ -1,0 +1,74 @@
+/*
+
+*/
+/****************************************************************************************************************************************************************/
+
+
+/*
+[LIKE] can be a useful operator when you want to compare similar values.
+
+the [movies] table contains two films with similar titles, 'Se7en' and 'Seven'/
+
+How could we select all movies that start with 'Se' and end with 'en' and have exactly one character in the middle?
+
+SELECT * FROM movies WHERE name LIKE 'Se_en';
+
+[LIKE] 
+    is a special operator used with the [WHERE] clause to search for a specific patter in a column.
+[name LIKE 'Se_en'] 
+    is a condition evaluating the [name] column for a specific pattern
+[Se_en]
+    represents a pattern with a /wildcard/ character.
+
+The [_] means you can substitute any individual character here without breaking the pattern.
+The names [Seven] and [Se7en] both match this pattern.
+*/
+/****************************************************************************************************************************************************************/
+
+
+/*
+Instructions
+Checkpoint 1 Passed
+1.
+Let’s test it out.
+
+In the code editor, type:
+
+SELECT * 
+FROM movies
+WHERE name LIKE 'Se_en';
+
+Copy to Clipboard
+
+Double-check your query character by character:
+
+Note the single quotes around Se_en.
+Note the underscore in it.
+*/
+/****************************************************************************************************************************************************************/
+
+
+/*
+SELECT * FROM movies WHERE name LIKE 'Se_en';
+*/
+/****************************************************************************************************************************************************************/
+
+
+/*
+Query Results
+id	name	genre	year	imdb_rating
+219	Se7en	drama	1995	8.6
+220	Seven	drama	1979	6.1
+Database Schema
+movies
+name	type
+id	INTEGER
+name	TEXT
+genre	TEXT
+year	INTEGER
+imdb_rating	REAL
+Rows: 230
+*/
+/****************************************************************************************************************************************************************/
+
+
