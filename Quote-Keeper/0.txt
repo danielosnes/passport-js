@@ -1,0 +1,21 @@
+In this project, 
+you will write a feature test for the development of a web application that allows users to save and display a collection of their fave quotes.
+Quote Keeper should allow users to enter the following informatiom about each quote they would like to save to the app.
+
+- The Quote itself
+- Who the quote is attributed to
+- The Source Of The Quote:
+    - Book
+    - Article
+    - Speech
+    - IRL
+
+Because this course focuses on feature tests at the top level of the TDD Testing Pyramid,
+this project will only cover the feature tests process up to the point of getting an error about the exercise phase of your test suite.
+In order to progress we would need to drop down to the server layer of the pyramid, which is covered in another course.
+The completed form of this project will have a feature test suite that is ready to move on to test at the server level.
+
+The steps below will guide you through the process of using TDD to write a feature test for the Quote Keeper web app.
+
+After you complete each step, 
+run your test suite in the terminal to see the results of your test and evaluate what code to write next in response to the message.

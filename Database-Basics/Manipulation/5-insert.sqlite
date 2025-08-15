@@ -1,0 +1,115 @@
+/*
+
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+the [INSERT] statement inserts a new row into a table.
+
+We can use the [INSERT] statement when you want to add new records.
+The statement below enters a record for Justin Bieber into the [celebs] table.
+
+INSERT INTO celebs (id, name, age)
+VALUES (1, Justin Bieber, 29);
+
+[INSERT INTO]
+    is a clause that adds the specified row or rows.
+[celebs]
+    is the table the row is added to.
+[(id, name, age)]
+    is the parameter identifying the columns that data will be inserted into.
+[VALUES]
+    is a clause that indicates the data being inserted.
+[(1, Justin Bieber, 29)]
+    is a parameter identifying the values being inserted.
+    [1]: is an integer that will be added to the [id] column
+    [Justin Bieber]: text that will be added to the [name] column
+    [29]: is an integer that will be added to the [age] column
+
+
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+Instructions
+Checkpoint 1 Passed
+1.
+Add a row to the table. In the code editor, type:
+
+INSERT INTO celebs (id, name, age) 
+VALUES (1, 'Justin Bieber', 29); 
+
+Copy to Clipboard
+
+Look at the Database Schema. How many rows are in the celebs table?
+
+Make sure there is a set of parentheses around the column names and values to be inserted into the table!
+
+Notice the single quotes around Justin Bieber. This is because text strings require quotes around them, while numbers don’t.
+
+There should be 1 row in the celebs table now.
+
+Checkpoint 2 Passed
+2.
+Add three more celebrities to the table. Beneath your previous INSERT statement type:
+
+INSERT INTO celebs (id, name, age) 
+VALUES (2, 'Beyonce Knowles', 42); 
+
+INSERT INTO celebs (id, name, age) 
+VALUES (3, 'Jeremy Lin', 35); 
+
+INSERT INTO celebs (id, name, age) 
+VALUES (4, 'Taylor Swift', 33); 
+
+Copy to Clipboard
+
+Look at the Database Schema. How many rows are in the celebs table now?
+
+Make sure to enter the three new INSERT statements beneath the first INSERT statement.
+
+There should be 4 rows in the celebs table now.
+
+How do we see what information is stored in these rows? Head to the next exercise to find out!
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+INSERT INTO celebs (id, name, age) 
+VALUES (1, 'Justin Bieber', 29); 
+
+INSERT INTO celebs (id, name, age) 
+VALUES (2, 'Beyonce Knowles', 42); 
+
+INSERT INTO celebs (id, name, age) 
+VALUES (3, 'Jeremy Lin', 35); 
+
+INSERT INTO celebs (id, name, age) 
+VALUES (4, 'Taylor Swift', 33); 
+
+SELECT * FROM celebs;
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+Query Results
+id	name	age
+1	Justin Bieber	29
+2	Beyonce Knowles	42
+3	Jeremy Lin	35
+4	Taylor Swift	33
+Database Schema
+celebs
+name	type
+id	INTEGER
+name	TEXT
+age	INTEGER
+Rows: 4
+
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+
+*/
+/****************************************************************************************************************************************************************/

@@ -1,0 +1,106 @@
+$ npm test
+
+> calculator-js@0.0.0 test /home/ccuser/workspace/tdd-server-proj
+> bin/mocha-test && PORT=8001 bin/wdio-test
+
+
+
+  /
+    POST
+POST / 200 30.226 ms - 905
+      ✓ creates a new quote (148ms)
+
+
+  1 passing (155ms)
+
+GET / - - ms - -
+------------------------------------------------------------------
+[phantomjs #0-0] Session ID: 4dd01b30-793f-11f0-af14-5917498c61c3
+[phantomjs #0-0] Spec: /home/ccuser/workspace/tdd-server-proj/test/features/user-visits-root-test.js
+[phantomjs #0-0] Running: phantomjs
+[phantomjs #0-0]
+[phantomjs #0-0] User visits root
+[phantomjs #0-0]
+[phantomjs #0-0] posting a quote
+[phantomjs #0-0]   1) saves quotes and meta data submitted by the user
+[phantomjs #0-0]
+[phantomjs #0-0]
+[phantomjs #0-0] 1 failing (10s)
+[phantomjs #0-0]
+[phantomjs #0-0] 1) posting a quote saves quotes and meta data submitted by the user:
+[phantomjs #0-0] timeout of 10000ms exceeded. The execution in the test "posting a quote saves quotes and meta data submitted by the user" took too long. Try to reduce the run time or increase your timeout for test specs (http://webdriver.io/guide/testrunner/timeouts.html).
+[phantomjs #0-0] Error: timeout of 10000ms exceeded. The execution in the test "posting a quote saves quotes and meta data submitted by the user" took too long. Try to reduce the run time or increase your timeout for test specs (http://webdriver.io/guide/testrunner/timeouts.html).
+[phantomjs #0-0]     at Timeout.<anonymous> (/home/ccuser/node_modules/mocha/lib/runnable.js:226:19)
+[phantomjs #0-0]     at ontimeout (timers.js:386:14)
+[phantomjs #0-0]     at tryOnTimeout (timers.js:250:5)
+[phantomjs #0-0]     at Timer.listOnTimeout (timers.js:214:5)
+[phantomjs #0-0]
+
+npm ERR! Test failed.  See above for more details.
+$ npm test
+
+> calculator-js@0.0.0 test /home/ccuser/workspace/tdd-server-proj
+> bin/mocha-test && PORT=8001 bin/wdio-test
+
+
+
+  /
+    POST
+POST / 200 30.856 ms - 905
+      ✓ creates a new quote (145ms)
+
+
+  1 passing (151ms)
+
+GET / 200 22.661 ms - 711
+GET /stylesheets/style.css 200 3.314 ms - 111
+POST / 200 47.075 ms - 905
+GET /stylesheets/style.css 200 1.196 ms - 111
+------------------------------------------------------------------
+[phantomjs #0-0] Session ID: 626ee260-793f-11f0-9412-3b8aee403e80
+[phantomjs #0-0] Spec: /home/ccuser/workspace/tdd-server-proj/test/features/user-visits-root-test.js
+[phantomjs #0-0] Running: phantomjs
+[phantomjs #0-0]
+[phantomjs #0-0] User visits root
+[phantomjs #0-0]
+[phantomjs #0-0] posting a quote
+[phantomjs #0-0]   ✓ saves quotes and meta data submitted by the user
+[phantomjs #0-0]
+[phantomjs #0-0]
+[phantomjs #0-0] 1 passing (1s)
+[phantomjs #0-0]
+
+$ npm test
+
+> calculator-js@0.0.0 test /home/ccuser/workspace/tdd-server-proj
+> bin/mocha-test && PORT=8001 bin/wdio-test
+
+
+
+  /
+    POST
+POST / 200 30.011 ms - 905
+      ✓ creates a new quote (143ms)
+
+
+  1 passing (150ms)
+
+GET / 200 22.429 ms - 711
+GET /stylesheets/style.css 200 3.349 ms - 111
+POST / 200 48.810 ms - 905
+GET /stylesheets/style.css 200 1.056 ms - 111
+------------------------------------------------------------------
+[phantomjs #0-0] Session ID: 80ca7da0-793f-11f0-a535-13e2c8feca85
+[phantomjs #0-0] Spec: /home/ccuser/workspace/tdd-server-proj/test/features/user-visits-root-test.js
+[phantomjs #0-0] Running: phantomjs
+[phantomjs #0-0]
+[phantomjs #0-0] User visits root
+[phantomjs #0-0]
+[phantomjs #0-0] posting a quote
+[phantomjs #0-0]   ✓ saves quotes and meta data submitted by the user
+[phantomjs #0-0]
+[phantomjs #0-0]
+[phantomjs #0-0] 1 passing (1s)
+[phantomjs #0-0]
+
+$ 
