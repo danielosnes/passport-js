@@ -1,0 +1,74 @@
+/*
+
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+The [ALTER TABLE] statement adds a new column to a table.
+You can use this command when you want to add columns to a table.
+The statement below adds a new column [twitter_handle] to the [celebs] table.
+
+[ALTER TABLE] celebs
+[ADD COLUMN] twitter_handle TEXT;
+
+1: [ALTER TABLE]
+    is a clause that lets you make the specified changes.
+2: [celebs] 
+    is the name of the table being changed
+3: [ADD COLUMN]
+    is a clause that let's you add a new column to a table:
+        [twitter_handle] 
+            is the name of the new column being added
+        [TEXT]
+            is the data type for the new column
+4: [NULL] is a special value in SQL that represents missing or unknown data.
+    Here, the rows that existed before the column was added have [NULL] (0) values for [twitter_handle].
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+Instructions
+Checkpoint 1 Passed
+1.
+Add a new column to the table. In the code editor, type:
+
+ALTER TABLE celebs 
+ADD COLUMN twitter_handle TEXT; 
+
+SELECT * FROM celebs; 
+
+Copy to Clipboard
+
+Common errors:
+
+Missing the complete ADD COLUMN syntax.
+Missing the data type for the new column.
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+ALTER TABLE celebs
+ADD COLUMN twitter_handle TEXT;
+
+SELECT * FROM celebs;
+*/
+/****************************************************************************************************************************************************************/
+
+/*
+Query Results
+id	name	age	twitter_handle
+1	Justin Bieber	29	
+2	Beyonce Knowles	42	
+3	Jeremy Lin	35	
+4	Taylor Swift	33	
+Database Schema
+celebs
+name	type
+id	INTEGER
+name	TEXT
+age	INTEGER
+twitter_handle	TEXT
+Rows: 4
+*/
+/****************************************************************************************************************************************************************/
+
