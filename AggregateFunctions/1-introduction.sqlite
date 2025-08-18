@@ -1,0 +1,21 @@
+/*
+SQL Queries don't just access raw data, they can also perform calculations on the raw data to answer specific data questions.
+
+calculations performed on multiple data rows of a table are called [aggregates]
+
+In this lesson, we have given you a table named [fake_apps] which is made up of fake mobile applications data.
+
+Here is a quick preview of some important aggregates that we will cover in the next five exercises.
+
+[COUNT()] : Count the number of rows.
+
+[SUM()] : The sum of the values in a column.
+
+[MAX()]/[MIN()] : The largest/smallest value.
+
+[AVG()] : The average of the values in a column.
+
+[ROUND()] : Round the values in the column.
+
+Let's get started!
+*/
