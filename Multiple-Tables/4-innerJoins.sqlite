@@ -1,0 +1,172 @@
+/*
+Let's revisit how we joined orders and customers.
+
+For every possible value of a customer_id in orders,
+there was a corresponding row of customer with the same customer_id.
+
+What if that wasn't true?
+
+For intance,
+imagine that our customers table was out of date,
+and missing any information on customer 11.
+If that customer had an order in orders, what would happen when we joined the tables?
+
+When we perform a simple JOIN (often called an inner join)  our result only includes rows that match our ON condition.
+
+Consider the following animation,
+which illustrates an inner join of two tables (table1.c2 = table2.c2):
+
+Table1                Table2
++----+----+           +----+----+
+| C1 | C2 |           | C2 | C3 |
++----+----+           +----+----+
+| A  | B  |           | B  | C  |
+| Q  | W  |           | E  | R  |
+| X  | Y  |           | Y  | Z  |
++----+----+           +----+----+
+
+
+Table1.C2   Table2.C2   Match?
+---------   ---------   ------
+B           B           ✅ Keep
+W           B           ❌
+W           E           ❌
+W           Y           ❌
+Y           B           ❌
+Y           E           ❌
+Y           Y           ✅ Keep
+
+
+Result of INNER JOIN on C2:
++----+----+----+
+| C1 | C2 | C3 |
++----+----+----+
+| A  | B  | C  |
+| X  | Y  | Z  |
++----+----+----+
+
+The first and last rows have matching values of C2 .
+The middle rows do not match.
+The fnal results has all values from the first and last rows but does not include the non-matching middle row.
+
+Instructions
+Checkpoint 1 Passed
+1.
+Suppose we are working for The Codecademy Times, a newspaper with two types of subscriptions:
+
+print newspaper
+online articles
+Some users subscribe to just the newspaper, some subscribe to just the online edition, and some subscribe to both.
+
+There is a newspaper table that contains information about the newspaper subscribers.
+
+Count the number of subscribers who get a print newspaper using COUNT().
+
+Use COUNT(*) to count all rows of a table:
+
+SELECT COUNT(*)
+FROM newspaper;
+
+Copy to Clipboard
+
+Checkpoint 2 Passed
+2.
+Don’t remove your previous query.
+
+There is also an online table that contains information about the online subscribers.
+
+Count the number of subscribers who get an online newspaper using COUNT().
+
+Use COUNT(*) to count all rows of a table:
+
+SELECT COUNT(*)
+FROM online;
+
+Copy to Clipboard
+
+Checkpoint 3 Passed
+3.
+Don’t remove your previous queries.
+
+Join newspaper table and online table on their id columns (the unique ID of the subscriber).
+
+How many rows are in this table?
+
+Suppose we do:
+
+SELECT *
+FROM newspaper
+LIMIT 10;
+
+SELECT *
+FROM online
+LIMIT 10;
+
+Copy to Clipboard
+
+You will notice that both newspaper table and online table have an id column.
+
+And we want to match these two columns:
+
+newspaper.id
+online.id
+Your ON statement should look like this:
+
+ON newspaper.id = online.id
+
+Copy to Clipboard
+
+Remember to use SELECT COUNT(*) to count the rows:
+
+SELECT COUNT(*)
+FROM newspaper
+JOIN online
+  ON newspaper.id = online.id;
+
+Copy to Clipboard
+
+//task 1
+SELECT COUNT(*)
+FROM newspaper;
+//task 2
+SELECT COUNT(*)
+FROM online;
+//task 3
+SELECT COUNT(*)
+FROM newspaper
+JOIN online
+ON newspaper.id = online.id;
+
+Query Results
+COUNT(*)
+60
+COUNT(*)
+65
+COUNT(*)
+50
+Database Schema
+newspaper
+name	type
+id	INT
+first_name	VARCHAR(256)
+last_name	VARCHAR(256)
+email	VARCHAR(256)
+start_month	INT
+end_month	INT
+Rows: 60
+online
+name	type
+id	INT
+first_name	VARCHAR(256)
+last_name	VARCHAR(256)
+email	VARCHAR(256)
+start_month	INT
+end_month	INT
+Rows: 65
+months
+name	type
+month	INT
+Rows: 12
+
+
+*/
