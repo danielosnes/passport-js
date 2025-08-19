@@ -1,0 +1,110 @@
+/*
+Let's return to our magazine company. 
+Suppose we have the three tables described in the previous excercise :
+
+orders
+(a table with information on each magazine purchase)
+
+order_id	customer_id	subscription_id	purchase date
+1	2	3	2017-01-01
+2	2	2	2017-01-01
+3	3	1	2017-01-01
+
+subscriptions
+(a table that describes each type of subscription)
+
+subscription_id	description	price_per_month	length
+1	Politics Magazine	5	12 months
+2	Fashion Magazine	10	6 months
+3	Sports Magazine	7	3 months
+
+customers
+(a table with customer names and contact information)
+
+customer_id	customer_name	address
+1	John Smith	123 Main St
+2	Jane Doe	456 Park Ave
+3	Joe Schmo	798 Broadway
+
+-----------------------------------------------------------------------
+
+orders
+subscriptions
+customers
+
+If we look at the orders table we can't really tell what's happened in each order,
+however if we refer to the other tables, we can get a complete picture.
+
+Let's examine the order with an order_id of 2.
+It was purchased by the customer with a customer_id of 2.
+
+To find out the customer's name,
+we look at the customers table and look for the customer_id value of 2. 
+We can see that Customer's 2 name is 'Jane Doe' and that she lives at '456 Park Ave'.
+
+Doing this kind of matching is called Joining two tables.
+
+Before:
+
+orders
+(a table with information on each magazine purchase)
+
+order_id	customer_id	subscription_id	purchase date
+1	2	3	2017-01-01
+2	2	2	2017-01-01
+3	3	1	2017-01-01
+
+subscriptions
+(a table that describes each type of subscription)
+
+subscription_id	description	price_per_month	length
+1	Politics Magazine	5	12 months
+2	Fashion Magazine	10	6 months
+3	Sports Magazine	7	3 months
+
+customers
+(a table with customer names and contact information)
+
+customer_id	customer_name	address
+1	John Smith	123 Main St
+2	Jane Doe	456 Park Ave
+3	Joe Schmo	798 Broadway
+
+
+Instructions
+Checkpoint 1 Passed
+1.
+Using the tables displayed, what is the description of the magazine ordered in order_id 1?
+
+Type your answer on line 1 of the code editor (this is not a query).
+
+Be sure to capitalize it the same as in the table.
+
+First, we look at the orders table.
+
+The order with an order_id of 1 is in the first row. Its subscription_id is 3.
+
+Then we look at the subscriptions table.
+
+The subscription with a subscription_id of 3 is in the third row. Its description is Sports Magazine.
+
+Answer: Sports Magazine
+
+Don’t write a query for this exercise!
+
+Checkpoint 2 Passed
+2.
+Using the tables displayed, what is the customer_name of the customer in order_id 3?
+
+Type your answer on line 2 of the code editor.
+
+Be sure to capitalize it the same as in the table.
+
+Answer: Joe Schmo
+ // editor: 
+Sports Magazine
+
+Joe Schmo
+
+
+*/
