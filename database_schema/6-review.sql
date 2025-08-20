@@ -1,6 +1,5 @@
 /*
 Review
-<1 min
 Nice work! In this lesson, you have accomplished the following:
 
 You have learned what a database schema is.
