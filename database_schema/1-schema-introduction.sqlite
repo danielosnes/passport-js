@@ -1,0 +1,102 @@
+/*
+Welcome!
+
+In this lesson, you will learn what a database schema is and how to create one in PostgreSQL.
+PostgreSQL is a popular database management system that stores information on a dedicated database server instead of on a local filesystem.
+The benefits of using a database system include better organization of related information, more efficient storage and faster retrieval.
+
+Like an architectural blueprint, a database schema is documentation that helps its audience such as a database designer, administrator and other users that interact with a database.
+It gives an overview of the purpose of the database along with the data that makes up the database,
+how the data is organizes into tables, how the tables are internally structured and how they relate to one another.
+
+When designing a database schema, consider the following steps:
+
+- Define the purpose of your database
+- Find the information that make up the database
+- Organize your information into tables
+- Avoid redundant data that leads to innacuracy and waste in space
+- Identify the relationships between your tables and implement them
+
+The last two items ensure data accuracy and integrity anytime you need to add or update information in the database.
+It also makes querying much more efficient.
+
+You can design database schemas by hand or software.
+Here are a few examples of free online database design tools:
+
+DbDiagram.io
+    - a free, simple tool to draw ER diagrams by just writing code, deisgned for developers and data analysts
+SQLDB 
+    - SQL Database Modeler
+DB Designer 
+    - online database schema design and modeling tool
+
++-------------------------+
+|         book            |
++-------------------------+
+| title        varchar(100) |
+| isbn        varchar(50) PK|
+| pages       integer       |
+| price       money         |
+| description varchar(256)  |
+| publisher   varchar(100)  |
++-------------------------+
+             | 1
+             |
+             | *
++-------------------------+
+|        chapter          |
++-------------------------+
+| id          integer PK   |
+| book_isbn   varchar(50)  |
+| number      integer      |
+| title       varchar(50)  |
++-------------------------+
+
+
++-------------------------+
+|        author           |
++-------------------------+
+| name        varchar(50)  |
+| bio         varchar(100) |
+| email       varchar(20)PK|
++-------------------------+
+             | 1
+             |
+             | *
++-------------------------+
+|       book_list         |
++-------------------------+
+| book_isbn    varchar(50) |
+| author_email varchar(20) |
++-------------------------+
+
+
+This diagram is a sample database schema diagram generated from DbDiagram.io 
+Let's take a look at what it entails:
+
+The purpose of this database is to maintain a book inventory.
+The information in the database is organized into 4 tables and they are [book], [chapter], [author] and [book_list].
+What data are we storing about a book?
+What is the [book_list] table used for?
+
+In this particular schema diagram, the symbols [1] and [*] on the lines denote a [one-to-many] relationships between these tables.
+
+- [book] and [chapter]
+- [book] and [book_list]
+- [author] and [book_list]
+
+We will delve into relationships in more detail in a later lesson.
+Different database tools illustrate table relationships with different symbols.
+
+Your database schema should contain the following:
+
+- Table names
+- Column names per table
+- column types per table
+- constraints per table, if any
+- relationships between tables, if any
+
+In this lesson, 
+we will focus mainly on the first three items.
+In subsequent lessons, we will address constraints and relationships.
+*/
